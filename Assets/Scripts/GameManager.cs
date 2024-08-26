@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public int score { get; private set; }
     public int lives { get; private set; }
+    public int ghost_coefficient { get; private set; } = 1;
 
     private void Start()
     {
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetState()  // divided from pellets to reset when there are still "lives"
     {
+        ResetGhostScoreMultiplier();
         for (int i = 0; i < this.ghosts.Length; i++)
         {
             this.ghosts[i].gameObject.SetActive(true);
@@ -70,7 +72,8 @@ public class GameManager : MonoBehaviour
 
     public void GhostEaten(Ghost ghost)
     {
-        SetScore(this.score + ghost.points);
+        SetScore(this.score + (ghost.points * this.ghost_coefficient));
+        this.ghost_coefficient++;
     }
 
     public void PacmanEaten(Pacman ghost) 
@@ -82,5 +85,39 @@ public class GameManager : MonoBehaviour
         if (this.lives >= 0) Invoke(nameof(ResetState), 3.0f);
         else GameOver();
 
+    }
+
+    public void PelletEaten(Pellet pellet)
+    {
+        pellet.gameObject.SetActive(false);
+        SetScore(this.score + pellet.points);
+
+        if (!IsPelletRemaining())
+        {
+            this.pacman.gameObject.SetActive(false);
+            Invoke(nameof(NewRound), 3.0f);
+        }
+    }
+
+    public void PowerPelletEaten(PowerPellet pellet)
+    {
+        PelletEaten(pellet);
+        CancelInvoke();
+        Invoke(nameof(ResetGhostScoreMultiplier), pellet.duration);
+    }
+
+    private bool IsPelletRemaining()
+    {
+        foreach (Transform pellet in this.pellets)
+        {
+            if (pellet.gameObject.activeSelf) return true;
+        }
+
+        return false;
+    }
+
+    private void ResetGhostScoreMultiplier()
+    {
+        this.ghost_coefficient = 1;
     }
 }
