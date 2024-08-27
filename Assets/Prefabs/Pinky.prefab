@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2877960707708840551
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 783981025015208209, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.949434
+      objectReference: {fileID: 0}
+    - target: {fileID: 783981025015208209, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6839622
+      objectReference: {fileID: 0}
+    - target: {fileID: 783981025015208209, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721785194992809326, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: initial_behaviour
+      value: 
+      objectReference: {fileID: 2141053531503130930}
+    - target: {fileID: 2468815013293621029, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Name
+      value: Pinky
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320015432972740673, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: initial_direction.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432413804714475521, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 150049420f8c7e64a94f1ee14d90500b, type: 3}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924767952299969734, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+--- !u!114 &2141053531503130930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4199077599169909589, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+  m_PrefabInstance: {fileID: 2877960707708840551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37f857a6fb945a468af4213041d4791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
