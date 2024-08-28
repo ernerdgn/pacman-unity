@@ -6,6 +6,7 @@ public class Ghost : MonoBehaviour
 {
     public Movement movement {  get; private set; }
     public Transform chase_target;
+    // public new Rigidbody2D rigidbody {  get; private set; }
     public GhostBehaviour initial_behaviour;
     public GhostHome home { get; private set; }
     public GhostChase chase { get; private set; }
@@ -21,6 +22,7 @@ public class Ghost : MonoBehaviour
         this.frightened = GetComponent<GhostFrightened>();
         this.scatter = GetComponent<GhostScatter>();
         this.movement = GetComponent<Movement>();
+        // this.rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Start()

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 278352187813185710, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 783981025015208209, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
       propertyPath: m_Color.b
       value: 0.949434
@@ -31,6 +35,10 @@ PrefabInstance:
     - target: {fileID: 3320015432972740673, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
       propertyPath: initial_direction.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199077599169909589, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4432413804714475521, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
       propertyPath: m_Sprite
@@ -76,6 +84,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8668670057674146381, guid: 0047bf3bc9adbe144ba635db694cb64f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -87,7 +99,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2877960707708840551}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c37f857a6fb945a468af4213041d4791, type: 3}
   m_Name: 
