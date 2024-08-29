@@ -16,7 +16,7 @@ public class Ghost : MonoBehaviour
 
     private void Awake()
     {
-        this.initial_behaviour = GetComponent<GhostBehaviour>();
+        //this.initial_behaviour = GetComponent<GhostBehaviour>();
         this.home = GetComponent<GhostHome>();
         this.chase = GetComponent<GhostChase>();
         this.frightened = GetComponent<GhostFrightened>();
@@ -50,5 +50,11 @@ public class Ghost : MonoBehaviour
             if (this.frightened.enabled) FindObjectOfType<GameManager>().GhostEaten(this);
             else FindObjectOfType<GameManager>().PacmanEaten();
         }
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        position.z = transform.position.z;
+        transform.position = position;
     }
 }

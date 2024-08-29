@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -20,6 +21,8 @@ public class GhostHome : GhostBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Debug.Log(this.enabled + "   ?ENABLED");
+        
         if (this.enabled && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))  // this.enabled && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle")
         {
             Debug.Log(true);
@@ -39,9 +42,13 @@ public class GhostHome : GhostBehaviour
 
         while (elapsed_time < duration)
         {
-            Vector3 new_pos = Vector3.Lerp(pos, this.home.position, elapsed_time / duration);
-            new_pos.z = pos.z;  
-            this.ghost.transform.position = new_pos;
+            //Vector3 new_pos = Vector3.Lerp(pos, this.home.position, elapsed_time / duration);
+            //new_pos.z = pos.z;  
+            //this.ghost.transform.position = new_pos;
+            //elapsed_time += Time.deltaTime;
+            //yield return null;
+
+            ghost.SetPosition(Vector3.Lerp(pos, home.position, elapsed_time / duration));
             elapsed_time += Time.deltaTime;
             yield return null;
         }
@@ -50,9 +57,13 @@ public class GhostHome : GhostBehaviour
 
         while (elapsed_time < duration)
         {
-            Vector3 new_pos = Vector3.Lerp(this.home.position, this.outside.position, elapsed_time / duration);
-            new_pos.z = pos.z;
-            this.ghost.transform.position = new_pos;
+            //Vector3 new_pos = Vector3.Lerp(this.home.position, this.outside.position, elapsed_time / duration);
+            //new_pos.z = pos.z;
+            //this.ghost.transform.position = new_pos;
+            //elapsed_time += Time.deltaTime;
+            //yield return null;
+
+            ghost.SetPosition(Vector3.Lerp(home.position, outside.position, elapsed_time / duration));
             elapsed_time += Time.deltaTime;
             yield return null;
         }
